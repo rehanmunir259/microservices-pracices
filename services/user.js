@@ -3,12 +3,12 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/microservicesdb', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/userdb', { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const userRoutes = require('./apis/routes/user');
+const userRoutes = require('../apis/routes/user');
 
 app.use('/users', userRoutes);
 

@@ -1,7 +1,7 @@
 const path = require('path');
 const gateway = require('express-gateway');
-require('./user');
-require('./music');
+require('./services/user');
+require('./services/music');
 
 gateway()
   .load(path.join(__dirname, 'config'))
